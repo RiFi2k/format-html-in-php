@@ -1,0 +1,40 @@
+{
+  "name": "format-html-in-php",
+  "displayName": "format-html-in-php",
+  "description": "",
+  "version": "0.0.1",
+  "publisher": "rifi2k",
+  "engines": {
+    "vscode": "^1.6.0"
+  },
+  "categories": [
+    "Formatters",
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:php"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "format-html-in-php.format",
+        "title": "Format HTML in PHP"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install && tsc"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "tslint": "^5.11.0",
+    "typescript": "^2.4.0",
+    "vscode": "*"
+  },
+  "dependencies": {
+    "js-beautify": "^1.7.5",
+    "php-parser": "^3.0.0-alpha2",
+    "htmlparser2": "^3.9.2"
+  }
+}
