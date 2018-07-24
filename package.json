@@ -1,8 +1,8 @@
 {
   "name": "format-html-in-php",
-  "displayName": "format-html-in-php",
-  "description": "",
-  "version": "0.0.1",
+  "displayName": "Format HTML in PHP",
+  "description": "Format nested HTML in PHP files for vscode",
+  "version": "1.0.1",
   "publisher": "rifi2k",
   "engines": {
     "vscode": "^1.6.0"
@@ -16,12 +16,7 @@
   ],
   "main": "./out/src/extension",
   "contributes": {
-    "commands": [
-      {
-        "command": "format-html-in-php.format",
-        "title": "Format HTML in PHP"
-      }
-    ]
+    "commands": []
   },
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install && tsc"
