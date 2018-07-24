@@ -8,6 +8,7 @@
     "url": "https://github.com/RiFi2k/format-html-in-php"
   },
   "license": "Unlicense",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.6.0"
   },
