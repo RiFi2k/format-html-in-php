@@ -4,6 +4,10 @@
   "description": "Format nested HTML in PHP files for vscode",
   "version": "1.0.0",
   "publisher": "rifi2k",
+  "repository": {
+    "url": "https://github.com/RiFi2k/format-html-in-php"
+  },
+  "license": "Unlicense",
   "engines": {
     "vscode": "^1.6.0"
   },
