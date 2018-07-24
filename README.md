@@ -16,7 +16,7 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 
 ## Usage
 
-Just activate the plugin and go about your day. Feel free to have nested HTML in .php files now, it will format as you are expecting.
+Just install and go about your day. Feel free to have nested HTML in .php files now, it will format as you are expecting.
 
 ## Default Settings
 
@@ -42,4 +42,7 @@ Maximum amount of characters per line (0 = disable).
   * Default: `false`
 
 Format on save, if you want it turn it on.
+
+## Props
+Most of the base for the format HTML modded from [vscode-php-cs-fixer](https://github.com/junstyle/vscode-php-cs-fixer)
 
