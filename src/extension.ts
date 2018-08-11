@@ -2,6 +2,7 @@
 
 import * as vscode from "vscode";
 import formatHtml from "./formatHtml";
+import options from "./options";
 
 export function activate(context: vscode.ExtensionContext) {
   vscode.languages.registerDocumentFormattingEditProvider(
@@ -16,10 +17,11 @@ export function activate(context: vscode.ExtensionContext) {
           new vscode.Position(0, 0),
           lastLine.range.end
         );
-        let options = {};
+        let formattingOptions = {};
+        console.log(options(document, formattingOptions));
         const htmlOptions = Object.assign(
-          options,
-          vscode.workspace.getConfiguration("html").get("format")
+          formattingOptions,
+          options(document, formattingOptions)
         );
         const modifiedText = formatHtml(originalText, htmlOptions);
         return [vscode.TextEdit.replace(range, modifiedText)];
