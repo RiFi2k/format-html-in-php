@@ -4,7 +4,7 @@
 [![](https://vsmarketplacebadge.apphb.com/installs-short/rifi2k.format-html-in-php.svg)](https://marketplace.visualstudio.com/items?itemName=rifi2k.format-html-in-php)
 [![](https://vsmarketplacebadge.apphb.com/rating-short/rifi2k.format-html-in-php.svg)](https://marketplace.visualstudio.com/items?itemName=rifi2k.format-html-in-php)
 
-This extensions concept is to provide formatting for HTML code in PHP files. There are no configurations to mess with and everything ties into the native formatter API.
+This extensions concept is to provide formatting for HTML code in PHP files. There are no configurations to mess with and I'm even nice enough to do the formatting onBeforeSave so you can still activate another extension to format the actual PHP. This way the formatting getting done on the HTML should run right before the save action which triggers any other registered PHP formatting.
 
 Basically this extension uses all your standard configurations for html formatting, and your standard configurations for format on save, etc. It more or less works exactly how vscode should already work as it pertains to HTML in PHP files.
 
@@ -78,6 +78,11 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 ---
 
 ## Release Notes
+
+### 1.3.0
+
+Being a better neighbor!
+* Change from registering as a formatting provider (which languages can only have one active), to doing the work onBeforeSave. This way if users wanted to activate an extension that formatted the actual PHP we can all live in harmony. Most likely a formatting extension like phpcbf is going to register as a format provider so I proactively moved my work out of the way, because I'm always looking out and don't want a user to have to decide "which extension to keep".
 
 ### 1.2.0
 
