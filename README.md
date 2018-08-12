@@ -20,21 +20,7 @@ Just install and go about your day. Feel free to have nested HTML in .php files 
 
 ## Default Settings
 
-Note: All `html.format`, detect indentation, editor format, settings apply but you may want to tweak these...
-
-#### html.format.enable
-
-  * Type: `bool`
-  * Default: `true`
-
-Enable/disable default HTML formatter.
-
-#### html.format.wrapLineLength
-
-  * Type: `number`
-  * Default: `120`
-
-Maximum amount of characters per line (0 = disable).
+Note: All `html.format`, and editor settings concerning spaces vs. tabs will be applied
 
 #### editor.formatOnSave
 
@@ -42,7 +28,3 @@ Maximum amount of characters per line (0 = disable).
   * Default: `false`
 
 Format on save, if you want it turn it on.
-
-## Props
-Most of the base for the format HTML modded from [vscode-php-cs-fixer](https://github.com/junstyle/vscode-php-cs-fixer)
-
