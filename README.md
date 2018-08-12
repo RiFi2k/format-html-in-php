@@ -10,6 +10,8 @@ Basically this extension uses all your standard configurations for html formatti
 
 There are multiple issues and [threads](https://stackoverflow.com/questions/41330707/how-to-format-php-files-with-html-markup-in-visual-studio-code) about this issue and nothing seemed to work for me 100%.
 
+If you have any issues, ideas, feature requests go ahead and [add them here](https://github.com/RiFi2k/format-html-in-php/issues). I'm pretty much down to help, add, or fix anything because I know this is badly needed for a lot of PHP / WordPress devs and I'm sure it keeps a ton of people from switching to VScode.
+
 ---
 
 ## Using This Extension
