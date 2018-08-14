@@ -47,21 +47,6 @@ Here is the list of native vscode settings being used to format HTML in PHP file
 
 // List of tags, comma separated, that should have an extra newline before them. 'null' defaults to "head, body, /html".
 "html.format.extraLiners": "head, body, /html",
-
-// Format and indent {{#foo}} and {{/foo}}.
-"html.format.indentHandlebars": false,
-
-// Indent <head> and <body> sections.
-"html.format.indentInnerHtml": false,
-
-// Maximum number of line breaks to be preserved in one chunk. Use 'null' for unlimited.
-"html.format.maxPreserveNewLines": null,
-
-// Whether existing line breaks before elements should be preserved. Only works before elements, not inside tags or for text.
-"html.format.preserveNewLines": true,
-
-// Maximum amount of characters per line (0 = disable).
-"html.format.wrapLineLength": 120,
 ```
 
 ---
@@ -78,6 +63,10 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 ---
 
 ## Release Notes
+
+### 1.3.1
+
+* Had to remove a few options which were causing problems formating in certain situations.
 
 ### 1.3.0
 

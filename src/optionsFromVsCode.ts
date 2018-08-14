@@ -68,12 +68,6 @@ export default function(config) {
     indent_char: " ",
     end_with_newline: config.html.format.endWithNewline,
     extra_liners: extraLinersVal,
-    indent_handlebars: config.html.format.indentHandlebars,
-    indent_inner_html: config.html.format.indentInnerHtml,
-    max_preserve_newlines: config.html.format.maxPreserveNewLines,
-    preserve_newlines: config.html.format.preserveNewLines,
-    wrap_line_length: config.html.format.wrapLineLength,
-    wrap_attributes: "auto",
     content_unformatted: arrayUnique(defaultContentUnformatted.concat(contentUnformattedVal)),
   };
 
