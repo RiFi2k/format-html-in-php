@@ -79,6 +79,10 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 
 ## Release Notes
 
+### 1.3.4
+
+* Fixes [#2](https://github.com/RiFi2k/format-html-in-php/issues/2) Forgot about the fact when I switched to the save hook, it would run everytime no matter what. Duh.
+
 ### 1.3.2
 
 * Figured out the root cause was some of my defaults which I removed so I was able to add back in all the configurable fields again.
