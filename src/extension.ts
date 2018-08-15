@@ -37,16 +37,18 @@ class DocumentWatcher {
     reason: vscode.TextDocumentSaveReason
 	): Promise<vscode.TextEdit[]> {
     const config = vscode.workspace.getConfiguration();
-    const activeDoc = this.getActiveDoc(vscode.window.activeTextEditor);
-    const lastLine = activeDoc.lineAt(activeDoc.lineCount - 1);
-    const range = new vscode.Range(
+    if (config.editor.formatOnSave === true) {
+      const activeDoc = this.getActiveDoc(vscode.window.activeTextEditor);
+      const lastLine = activeDoc.lineAt(activeDoc.lineCount - 1);
+      const range = new vscode.Range(
       new vscode.Position(0, 0),
-      lastLine.range.end
-    );
-    return [vscode.TextEdit.replace(
-      range,
-      beautifyHtml(activeDoc.getText(), optionsFromVSCode(config))
-    )];
+        lastLine.range.end
+      );
+      return [vscode.TextEdit.replace(
+        range,
+        beautifyHtml(activeDoc.getText(), optionsFromVSCode(config))
+      )];
+    }
   }
 
 }
