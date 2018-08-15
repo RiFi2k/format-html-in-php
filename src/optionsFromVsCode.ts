@@ -30,30 +30,7 @@ export default function(config) {
     contentUnformattedVal = config.html.format.contentUnformatted;
   }
 
-  const defaultContentUnformatted = [
-    "area",
-    "base",
-    "br",
-    "col",
-    "embed",
-    "hr",
-    "img",
-    "input",
-    "keygen",
-    "link",
-    "menuitem",
-    "meta",
-    "param",
-    "source",
-    "track",
-    "wbr",
-    "!doctype",
-    "?xml",
-    "?php",
-    "?=",
-    "basefont",
-    "isindex"
-  ];
+  const defaultContentUnformatted = [];
 
   let indentTabs;
   if (config.editor.insertSpaces === true) {
@@ -69,6 +46,12 @@ export default function(config) {
     end_with_newline: config.html.format.endWithNewline,
     extra_liners: extraLinersVal,
     content_unformatted: arrayUnique(defaultContentUnformatted.concat(contentUnformattedVal)),
+    indent_handlebars: config.html.format.indentHandlebars,
+    indent_inner_html: config.html.format.indentInnerHtml,
+    max_preserve_newlines: config.html.format.maxPreserveNewLines,
+    preserve_newlines: config.html.format.preserveNewLines,
+    wrap_line_length: config.html.format.wrapLineLength,
+    wrap_attributes: "auto",
   };
 
   return options;
