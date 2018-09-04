@@ -1,11 +1,5 @@
 # Format HTML in PHP
 
-[![](https://vsmarketplacebadge.apphb.com/version-short/rifi2k.format-html-in-php.svg)](https://marketplace.visualstudio.com/items?itemName=rifi2k.format-html-in-php)
-[![](https://vsmarketplacebadge.apphb.com/installs-short/rifi2k.format-html-in-php.svg)](https://marketplace.visualstudio.com/items?itemName=rifi2k.format-html-in-php)
-[![](https://vsmarketplacebadge.apphb.com/rating-short/rifi2k.format-html-in-php.svg)](https://marketplace.visualstudio.com/items?itemName=rifi2k.format-html-in-php)
-
-[![CircleCI](https://circleci.com/gh/RiFi2k/format-html-in-php/tree/master.svg?style=svg)](https://circleci.com/gh/RiFi2k/format-html-in-php/tree/master)
-
 This extensions concept is to provide formatting for HTML code in PHP files. There are no configurations to mess with and I'm even nice enough to do the formatting onBeforeSave so you can still activate another extension to format the actual PHP. This way the formatting getting done on the HTML should run right before the save action which triggers any other registered PHP formatting.
 
 Basically this extension uses all your standard configurations for html formatting, and your standard configurations for format on save, etc. It more or less works exactly how vscode should already work as it pertains to HTML in PHP files.
@@ -80,6 +74,10 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 ---
 
 ## Release Notes
+
+### 1.3.6
+
+* Remove SVGs from README
 
 ### 1.3.5
 
