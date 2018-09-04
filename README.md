@@ -81,6 +81,11 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 
 ## Release Notes
 
+### 1.3.5
+
+* Fixes [#4](https://github.com/RiFi2k/format-html-in-php/issues/4) Check for formatOnSave being set under the nested setting for just PHP files, and not just checking the main setting.
+* Fixes [#5](https://github.com/RiFi2k/format-html-in-php/issues/5) Duplicate of #4
+
 ### 1.3.4
 
 * Fixes [#2](https://github.com/RiFi2k/format-html-in-php/issues/2) Forgot about the fact when I switched to the save hook, it would run everytime no matter what. Duh.
