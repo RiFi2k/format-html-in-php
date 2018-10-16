@@ -37,7 +37,7 @@ class DocumentWatcher {
     reason: vscode.TextDocumentSaveReason
 	): Promise<vscode.TextEdit[]> {
     const config = vscode.workspace.getConfiguration();
-    const phpConfig = config['[php]']['editor.formatOnSave'];
+    const phpConfig = vscode.workspace.getConfiguration().get('[php]')['editor.formatOnSave'];
     if (config.editor.formatOnSave === true || phpConfig === true) {
       const activeDoc = this.getActiveDoc(vscode.window.activeTextEditor);
       const lastLine = activeDoc.lineAt(activeDoc.lineCount - 1);

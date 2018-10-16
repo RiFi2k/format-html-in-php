@@ -86,6 +86,10 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 
 ## Release Notes
 
+### 1.3.8
+
+* Update code for checking on PHP scoped formatOnSave setting to use native vscode method.
+
 ### 1.3.7
 
 * Update README to be more clear about how formatOnSave settings should be configured.
