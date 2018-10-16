@@ -12,7 +12,8 @@ If you have any issues, ideas, feature requests go ahead and [add them here](htt
 
 ## Using This Extension
 
-1. Install
+1. Install.
+2. Turn on format on save either globally or scoped to PHP. (Example below)
 2. Go about your day.
 
 **Feel free to have nested HTML in .php files now, it will format as you are expecting.**
@@ -21,7 +22,17 @@ If you have any issues, ideas, feature requests go ahead and [add them here](htt
 
 ## Settings
 
-> Note: This extension uses all the native settings that already exist in vscode.
+> Note: This extension is not a PHP formatting extension, it only formats the HTML in a PHP file, because of this the action is triggered onBeforeSave. So this means you will need to turn formatOnSave on for it to have any effect. Also you must have a PHP formatting extension enabled so that this extension can piggyback off its save hook.
+
+Here is an example of having having formatting on save turned on for only PHP files, so you can keep the global format on save turned off.
+
+```
+"editor.formatOnSave": false,
+"[php]": {
+"editor.formatOnSave": true
+}
+
+```
 
 Here is the list of native vscode settings being used to format HTML in PHP files after you activate this extension. Just change any of these settings and the next time you format your PHP file the new changes should take effect.
 
@@ -33,7 +44,7 @@ Here is the list of native vscode settings being used to format HTML in PHP file
 "editor.tabSize": 4,
 
 // Format a file on save. A formatter must be available, the file must not be auto-saved, and editor must not be shutting down.
-"editor.formatOnSave": false,
+"editor.formatOnSave": true,
 
 // List of tags, comma separated, where the content shouldn't be reformatted. 'null' defaults to the 'pre' tag.
 "html.format.contentUnformatted": "pre,code,textarea",
@@ -74,6 +85,10 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 ---
 
 ## Release Notes
+
+### 1.3.7
+
+* Update README to be more clear about how formatOnSave settings should be configured.
 
 ### 1.3.6
 
