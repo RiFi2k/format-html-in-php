@@ -12,21 +12,28 @@ class DocumentWatcher {
 
   constructor() {
     const subscriptions: vscode.Disposable[] = [];
-    subscriptions.push(vscode.workspace.onWillSaveTextDocument(async e => {
-      const activeDoc = this.getActiveDoc(vscode.window.activeTextEditor);
-      if (activeDoc.languageId === 'php') {
-        const editor = vscode.window.activeTextEditor;
-        const position = editor.selection.active;
-        const newPosition = position.with(position.line, 0);
-        console.log(position,newPosition);
-        const newSelection = new vscode.Selection(newPosition, newPosition);
-        const transformations = this.doPreSaveTransformations(
-          e.document,
-          e.reason
+    subscriptions.push(vscode.workspace.onWillSaveTextDocument(event => {
+      const editor = vscode.window.activeTextEditor;
+      if (editor.document.languageId === 'php') {
+        const cursor = editor.selection.active;
+        const last = editor.document.lineAt(editor.document.lineCount - 1);
+        const range = new vscode.Range(
+          new vscode.Position(0, 0),
+          last.range.end
         );
-        e.waitUntil(transformations);
-        await transformations;
-        editor.selection = newSelection;
+        event.waitUntil(this.doPreSaveTransformations(
+          event.document,
+          event.reason
+        ).then((content) => {
+          editor.edit(edit => {
+            edit.replace(range, content);
+          }).then(success => {
+            if (success) {
+              const origSelection = new vscode.Selection(cursor, cursor);
+              editor.selection = origSelection;
+            }
+          });
+        }));
       }
     }));
     this.disposable = vscode.Disposable.from.apply(this, subscriptions);
@@ -36,39 +43,50 @@ class DocumentWatcher {
     this.disposable.dispose();
   }
 
-  private getActiveDoc(activeEditor) {
-    return get(activeEditor, 'document');
-  }
-
   private async doPreSaveTransformations(
     doc: vscode.TextDocument,
     reason: vscode.TextDocumentSaveReason
-	): Promise<vscode.TextEdit[]> {
+  ): Promise<string> {
     const config = vscode.workspace.getConfiguration();
     const phpScopedFormat = has(config, '[php]');
     let phpScopedFormatVal = false;
-    if (phpScopedFormat === true) {
+    if (phpScopedFormat) {
       const phpScopedObj = get(config, '[php]');
-      if (phpScopedObj['editor.formatOnSave'] === true) {
+      if (phpScopedObj['editor.formatOnSave']) {
         phpScopedFormatVal = true;
       }
     }
     if (config.editor.formatOnSave === true || phpScopedFormatVal === true) {
-      const activeDoc = this.getActiveDoc(vscode.window.activeTextEditor);
-      const lastLine = activeDoc.lineAt(activeDoc.lineCount - 1);
-      const range = new vscode.Range(
-      new vscode.Position(0, 0),
-        lastLine.range.end
-      );
-      return [vscode.TextEdit.replace(
-        range,
-        beautifyHtml(activeDoc.getText(), optionsFromVSCode(config))
-      )];
+      const html = vscode.window.activeTextEditor.document.getText();
+      const options = optionsFromVSCode(config);
+      return beautifyHtml(html, options);
     }
   }
 
 }
 
 export function activate(formatHtmlInPhp: vscode.ExtensionContext) {
-  formatHtmlInPhp.subscriptions.push(new DocumentWatcher());
+  const docWatch = new DocumentWatcher();
+  formatHtmlInPhp.subscriptions.push(docWatch);
+  formatHtmlInPhp.subscriptions.push(vscode.commands.registerCommand('formatHtmlInPhp.format', () => {
+    const editor = vscode.window.activeTextEditor;
+    const config = vscode.workspace.getConfiguration();
+    const cursor = editor.selection.active;
+    const last = editor.document.lineAt(editor.document.lineCount - 1);
+    const range = new vscode.Range(
+      new vscode.Position(0, 0),
+      last.range.end
+    );
+    const html = vscode.window.activeTextEditor.document.getText();
+    const options = optionsFromVSCode(config);
+    const formattedHtml = beautifyHtml(html, options);
+    editor.edit(edit => {
+      edit.replace(range, formattedHtml);
+    }).then(success => {
+      if (success) {
+        const origSelection = new vscode.Selection(cursor, cursor);
+        editor.selection = origSelection;
+      }
+    });
+  }));
 }
