@@ -51,7 +51,7 @@ export default function(config) {
     max_preserve_newlines: config.html.format.maxPreserveNewLines,
     preserve_newlines: config.html.format.preserveNewLines,
     wrap_line_length: config.html.format.wrapLineLength,
-    wrap_attributes: "auto",
+    wrap_attributes: config.html.format.wrapAttributes
   };
 
   return options;
