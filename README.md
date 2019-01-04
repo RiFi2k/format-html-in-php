@@ -12,8 +12,13 @@ If you have any issues, ideas, feature requests go ahead and [add them here](htt
 
 ## Using This Extension
 
-1. Install.
-2. Turn on format on save either globally or scoped to PHP. (Example below)
+There is a default registered keybinding for Ctrl + Alt + F but you can change this if desired through the standard keybindings menu.
+
+If you are within a PHP file I added a right click context menu option to Format HTML in PHP anytime you want.
+
+If you want it to automatically format on save...
+
+1. Turn on format on save either globally or scoped to PHP. (Example below)
 2. Go about your day.
 
 **Feel free to have nested HTML in .php files now, it will format as you are expecting.**
@@ -85,6 +90,17 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 ---
 
 ## Release Notes
+
+### 1.4.1
+
+* Update README
+
+### 1.4.0
+
+* Fixes [#11](https://github.com/RiFi2k/format-html-in-php/issues/11) Fixes the cursor jumping to the end of the file on formatting.
+* Fixes [#8](https://github.com/RiFi2k/format-html-in-php/issues/11) Adding workbench command for Format HTML in PHP.
+* Add right click menu option for Format HTML in PHP.
+* Add keybind Ctrl + Alt + F to format HTML in a PHP file.
 
 ### 1.3.8
 
