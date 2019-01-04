@@ -26,9 +26,11 @@ class DocumentWatcher {
           event.reason
         ).then((content) => {
           editor.edit(edit => {
-            edit.replace(range, content);
+            if (content !== '') {
+              edit.replace(range, content);
+            }
           }).then(success => {
-            if (success) {
+            if (success && content !== '') {
               const origSelection = new vscode.Selection(cursor, cursor);
               editor.selection = origSelection;
             }
@@ -61,6 +63,7 @@ class DocumentWatcher {
       const options = optionsFromVSCode(config);
       return beautifyHtml(html, options);
     }
+    return '';
   }
 
 }
