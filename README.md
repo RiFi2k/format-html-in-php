@@ -79,6 +79,12 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 
 ## Release Notes
 
+### 1.4.5
+
+* Demo vid.
+* README overhaul.
+* Badges.
+
 ### 1.4.4
 
 * Add HTML wrap attributes option.
