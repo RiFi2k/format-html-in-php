@@ -79,6 +79,10 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 
 ## Release Notes
 
+### 1.4.6
+
+* Don't add empty newline inside HTML script tags when html.format.endWithNewline is true.
+
 ### 1.4.5
 
 * Demo vid.
