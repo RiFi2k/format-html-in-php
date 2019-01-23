@@ -64,6 +64,11 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 
 ## Release Notes
 
+### 1.5.0
+
+* Updating to the new JS Beautify version. If anyone notices any issues let me know!
+* Upstream fixes [#14](https://github.com/RiFi2k/format-html-in-php/issues/14) - Don't format <?php tags
+
 ### 1.4.4
 
 * Add HTML wrap attributes option.
