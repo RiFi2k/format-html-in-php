@@ -1,12 +1,27 @@
-# Format HTML in PHP
+<h1 align="center">Format HTML in PHP</h1>
+
+<h4 align="center">Formatting for the HTML code in PHP files.</h4>
+
+<p align="center">
+<a href="https://marketplace.visualstudio.com/items?itemName=rifi2k.format-html-in-php"><img src="https://vsmarketplacebadge.apphb.com/version-short/rifi2k.format-html-in-php.svg?label=Format%20HTML%20in%20PHP" alt="Marketplace Badge"></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=rifi2k.format-html-in-php"><img src="https://vsmarketplacebadge.apphb.com/installs-short/rifi2k.format-html-in-php.svg?label=Installs" alt="Marketplace Badge"></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=rifi2k.format-html-in-php"><img src="https://vsmarketplacebadge.apphb.com/rating-star/rifi2k.format-html-in-php.svg?label=Rating" alt="Marketplace Badge"></a>
+</p>
 
 This extension provides formatting for the HTML code in PHP files. This way this works is this extension runs right before the save action which triggers any other registered PHP formatting extensions so you are free to have one and this will not get in the way or block it.
 
-This extension uses all your standard configurations from VSCode for HTML formatting, and your configurations for format on save.
+![Demo](https://github.com/RiFi2k/format-html-in-php/blob/master/format-html-in-php.gif?raw=true)
 
-There are multiple issues and threads about not being able to have multiple formatters per language, not being able to format the HTML in PHP files and none of the solutions seemed to work for me 100% so I decided to just figure it out and make my own solution.
+**Supported Features**
+* Uses VSCode configurations for HTML formatting
+* Uses VSCode format on save setting
+* Custom keybinding for anytime formatting
+* Right click context menu option on PHP files
+* Command Palette option for formatting
 
-> If you have any issues, ideas, feature requests go ahead and [add them here](https://github.com/RiFi2k/format-html-in-php/issues). I'm pretty much down to help, add, or fix anything because I know this is badly needed for a lot of PHP / WordPress devs and was a major annoyance for me and kept most of our WP devs from switching to VSCode until now.
+There are multiple issues and Stackoverflow posts about not being able to format the HTML in PHP files and none of the solutions proposed anywhere really worked 100% so I decided to fix it.
+
+> Issues, Ideas, Feature Requests? Go ahead and [add them](https://github.com/RiFi2k/format-html-in-php/issues). I'm down to help, add, or fix anything because I know this is badly needed for a lot of PHP / WordPress devs and was a major annoyance for me.
 
 **Feel free to have nested HTML in .php files now, it will format as you are expecting.**
 
