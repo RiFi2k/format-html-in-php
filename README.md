@@ -84,6 +84,10 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 * Updating to the new JS Beautify version. If anyone notices any issues let me know!
 * Upstream fixes [#14](https://github.com/RiFi2k/format-html-in-php/issues/14) - Don't format <?php tags
 
+### 1.4.6
+
+* Don't add empty newline inside HTML script tags when html.format.endWithNewline is true.
+
 ### 1.4.4
 
 * Add HTML wrap attributes option.
