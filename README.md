@@ -53,7 +53,7 @@ Turn on format on save either globally or scoped to PHP.
 
 ### HTML Settings
 
-Here is the list of native vscode settings I pass to JS Beautify which control how your HTML will be formatted.
+Here is the list of native vscode settings I pass to JS Beautify which control how your HTML will be formatted. You can change any of these to configure how the HTML will be formatted.
 
 ```json
 "editor.insertSpaces": true,
