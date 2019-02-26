@@ -79,6 +79,11 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 
 ## Release Notes
 
+### 1.5.2
+
+* Documentation update about HTML settings - [#17](https://github.com/RiFi2k/format-html-in-php/issues/17)
+* JS Beautify bump to latest beta
+
 ### 1.5.0
 
 * Updating to the new JS Beautify version. If anyone notices any issues let me know!
