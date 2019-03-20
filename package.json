@@ -53,7 +53,7 @@
   "main": "./dist/extension",
   "scripts": {
     "vscode:prepublish": "webpack --mode production",
-    "webpack": "webpack --mode development",
+    "webpack": "webpack --mode none",
     "webpack-dev": "webpack --mode development --watch",
     "postinstall": "node ./node_modules/vscode/bin/install"
   },
@@ -68,11 +68,7 @@
     "babel-plugin-lodash": "^3.3.4",
     "babel-preset-minify": "^0.5.0",
     "eslint": "^5.15.3",
-    "eslint-config-prettier": "^4.1.0",
     "eslint-import-resolver-webpack": "^0.11.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.16.4",
-    "prettier-eslint": "^8.8.2",
     "typescript": "^3.3.4000",
     "vscode": "^1.1.28",
     "webpack": "^4.29.6",
@@ -81,63 +77,5 @@
   "dependencies": {
     "js-beautify": "^1.9.0",
     "lodash": "^4.17.11"
-  },
-  "babel": {
-    "plugins": [
-      "lodash"
-    ],
-    "presets": [
-      [
-        "@babel/preset-env"
-      ],
-      [
-        "minify",
-        {
-          "evaluate": false,
-          "keepFnName": true,
-          "keepClassName": true,
-          "mangle": false
-        }
-      ]
-    ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "printWidth": 80,
-    "trailingComma": "none",
-    "arrowParens": "avoid",
-    "bracketSpacing": true,
-    "endOfLine": "lf"
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": false,
-      "commonjs": true,
-      "es6": true,
-      "node": true
-    },
-    "extends": [
-      "eslint:recommended",
-      "prettier"
-    ],
-    "plugins": [
-      "prettier"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint",
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "rules": {
-      "no-const-assign": "warn",
-      "no-this-before-super": "warn",
-      "no-undef": "warn",
-      "no-unreachable": "warn",
-      "no-unused-vars": "warn",
-      "constructor-super": "warn",
-      "valid-typeof": "warn"
-    }
   }
 }

@@ -8,11 +8,5 @@
     "sourceMap": true,
     "rootDir": "src"
   },
-  "include": [
-    "src/**/*.js",
-    "./node_modules/vscode/vscode.d.ts",
-    "./node_modules/vscode/lib/*",
-    "src/extension.js",
-    "src/utils/index.js"
-  ]
+  "include": ["src/**/*.js"]
 }

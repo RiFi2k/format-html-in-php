@@ -51,6 +51,7 @@ exports.deactivate = deactivate;
 
 function formatOnDemand() {
   const editor = getActiveEditor();
+  console.log(editor);
   const config = getWorkspaceConfig();
   const html = getActiveDoc();
   const options = getOptions(config);
@@ -71,7 +72,7 @@ function formatOnDemand() {
 
 function doPreSave(doc, reason) {
   const config = getWorkspaceConfig();
-
+  console.log(config);
   const phpScopedFormat = has(config, '[php]');
   let phpScopedFormatVal = false;
 

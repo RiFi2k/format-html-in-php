@@ -2,6 +2,10 @@
 .vscode
 node_modules
 src/**
-package-json.lock
-tsconfig.json
+test/**
+yarn.lock
+jsconfig.json
 webpack.config.js
+.eslintrc
+.prettierrc
+.babelrc

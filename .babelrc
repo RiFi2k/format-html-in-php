@@ -1,0 +1,15 @@
+{
+  "plugins": ["lodash"],
+  "presets": [
+    ["@babel/preset-env"],
+    [
+      "minify",
+      {
+        "evaluate": false,
+        "keepFnName": true,
+        "keepClassName": true,
+        "mangle": false
+      }
+    ]
+  ]
+}
