@@ -1,11 +1,66 @@
-// Place your settings in this file to overwrite default and user settings.
 {
-    "files.exclude": {
-        "out": false // set this to true to hide the "out" folder with the compiled JS files
-    },
-    "search.exclude": {
-        "out": true // set this to false to include "out" folder in search results
-    },
-    // Turn off tsc task auto detection since we have the necessary tasks as npm scripts
-    "typescript.tsc.autoDetect": "off"
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveTimeout": 10000,
+  "editor.scrollBeyondLastLine": false,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "docthis.inferTypesFromNames": true,
+  "npm.packageManager": "yarn",
+  "namespaceResolver.sortNatural": true,
+  "eslint.packageManager": "yarn",
+  "eslint.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.provideLintTask": false,
+  "eslint.run": "onType",
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": ["javascript"],
+  "prettier.eslintIntegration": true,
+  "[javascript]": {
+    "editor.insertSpaces": true
+  },
+  "[json]": {
+    "editor.insertSpaces": true
+  },
+  "[yaml]": {
+    "editor.insertSpaces": true
+  },
+  "javascript.autoClosingTags": false,
+  "javascript.format.insertSpaceAfterCommaDelimiter": false,
+  "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+  "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.referencesCodeLens.enabled": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "typescript.autoClosingTags": false,
+  "typescript.format.enable": false,
+  "typescript.format.insertSpaceAfterCommaDelimiter": false,
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+  "javascript.validate.enable": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
+  "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.reportStyleChecksAsWarnings": false,
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.tsc.autoDetect": "off",
+  "typescript.validate.enable": false,
+  "bracket-pair-colorizer-2.highlightActiveScope": true,
+  "terminal.explorerKind": "external",
+  "workbench.commandPalette.history": 200,
+  "workbench.commandPalette.preserveInput": true,
+  "workbench.enableExperiments": false,
+  "workbench.list.openMode": "doubleClick",
+  "workbench.quickOpen.closeOnFocusLost": false,
+  "breadcrumbs.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.quickSuggestionsDelay": 0
 }

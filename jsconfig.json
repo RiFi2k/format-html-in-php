@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "outDir": "out",
+    "checkJs": true,
+    "lib": ["es6"],
+    "sourceMap": true,
+    "rootDir": "src"
+  },
+  "include": [
+    "src/**/*.js",
+    "./node_modules/vscode/vscode.d.ts",
+    "./node_modules/vscode/lib/*",
+    "src/extension.js",
+    "src/utils/index.js"
+  ]
+}
