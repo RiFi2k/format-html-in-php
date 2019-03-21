@@ -79,6 +79,10 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 
 ## Release Notes
 
+### 1.5.3
+
+* JS Beautify to stable 1.9.0
+
 ### 1.5.2
 
 * Documentation update about HTML settings - [#17](https://github.com/RiFi2k/format-html-in-php/issues/17)
