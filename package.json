@@ -50,22 +50,26 @@
   "activationEvents": [
     "onLanguage:php"
   ],
-  "main": "./out/extension",
+  "main": "./dist/extension",
   "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
+    "vscode:prepublish": "node_modules/webpack/bin/webpack.js --mode production",
+    "webpack": "node_modules/webpack/bin/webpack.js --mode development",
+    "webpack-dev": "node_modules/webpack/bin/webpack.js --mode development --watch",
     "postinstall": "node ./node_modules/vscode/bin/install"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.123",
     "@types/node": "^10.12.18",
+    "lodash-webpack-plugin": "^0.11.5",
+    "ts-loader": "^5.3.3",
     "tslint": "^5.12.1",
-    "typescript": "^3.2.4",
-    "vscode": "^1.1.27"
+    "typescript": "^3.3.4",
+    "vscode": "^1.1.33",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
   },
   "dependencies": {
     "js-beautify": "1.9.0",
-    "lodash.get": "^4.4.2",
-    "lodash.has": "^4.5.2"
+    "lodash": "^4.17.11"
   }
 }

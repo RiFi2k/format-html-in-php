@@ -1,7 +1,6 @@
 'use strict';
 
-import * as get from 'lodash.get';
-import * as has from 'lodash.has';
+import * as _ from "lodash";
 import * as vscode from 'vscode';
 import beautifyHtml from './beautifyHtml';
 import optionsFromVSCode from './optionsFromVsCode';
@@ -37,7 +36,7 @@ class DocumentWatcher {
           });
         }));
       }
-    }));
+		}));
     this.disposable = vscode.Disposable.from.apply(this, subscriptions);
   }
 
@@ -50,17 +49,17 @@ class DocumentWatcher {
     reason: vscode.TextDocumentSaveReason
   ): Promise<string> {
     const config = vscode.workspace.getConfiguration();
-    const phpScopedFormat = has(config, '[php]');
+    const phpScopedFormat = _.has(config, '[php]');
     let phpScopedFormatVal = false;
     if (phpScopedFormat) {
-      const phpScopedObj = get(config, '[php]');
+      const phpScopedObj = _.get(config, '[php]');
       if (phpScopedObj['editor.formatOnSave']) {
         phpScopedFormatVal = true;
       }
     }
     if (config.editor.formatOnSave === true || phpScopedFormatVal === true) {
       const html = vscode.window.activeTextEditor.document.getText();
-      const options = optionsFromVSCode(config);
+			const options = optionsFromVSCode(config);
       return beautifyHtml(html, options);
     }
     return '';
