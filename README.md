@@ -2,12 +2,6 @@
 
 <h4 align="center">Formatting for the HTML code in PHP files.</h4>
 
-<p align="center">
-<a href="https://marketplace.visualstudio.com/items?itemName=rifi2k.format-html-in-php"><img src="https://vsmarketplacebadge.apphb.com/version-short/rifi2k.format-html-in-php.svg?label=Format%20HTML%20in%20PHP" alt="Marketplace Badge"></a>
-<a href="https://marketplace.visualstudio.com/items?itemName=rifi2k.format-html-in-php"><img src="https://vsmarketplacebadge.apphb.com/installs-short/rifi2k.format-html-in-php.svg?label=Installs" alt="Marketplace Badge"></a>
-<a href="https://marketplace.visualstudio.com/items?itemName=rifi2k.format-html-in-php"><img src="https://vsmarketplacebadge.apphb.com/rating-star/rifi2k.format-html-in-php.svg?label=Rating" alt="Marketplace Badge"></a>
-</p>
-
 This extension provides formatting for the HTML code in PHP files. This way this works is this extension runs right before the save action which triggers any other registered PHP formatting extensions so you are free to have one and this will not get in the way or block it.
 
 ![Demo](https://github.com/RiFi2k/format-html-in-php/blob/master/format-html-in-php.gif?raw=true)
@@ -78,6 +72,10 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 ---
 
 ## Release Notes
+
+### 1.6.1
+
+* JS Beautify to stable 1.10.1
 
 ### 1.5.3
 
