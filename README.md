@@ -73,6 +73,10 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 
 ## Release Notes
 
+### 1.6.2
+
+* JS Beautify to stable 1.10.3
+
 ### 1.6.1
 
 * JS Beautify to stable 1.10.1

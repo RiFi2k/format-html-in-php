@@ -2,7 +2,7 @@
   "name": "format-html-in-php",
   "displayName": "Format HTML in PHP",
   "description": "Provides formatting for the HTML code in PHP files using JSbeautify - Works well paired with a PHP formatting extension",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "publisher": "rifi2k",
   "repository": {
     "url": "https://github.com/RiFi2k/format-html-in-php"
@@ -58,16 +58,14 @@
     "postinstall": "node ./node_modules/vscode/bin/install"
   },
   "devDependencies": {
-    "@types/node": "12.7.2",
-    "tslint": "5.19.0",
-    "typescript": "3.5.3",
-    "vscode": "1.1.36"
+    "@types/node": "^13.1.8",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.5",
+    "vscode": "^1.1.36"
   },
   "dependencies": {
-    "@prettier/plugin-php": "0.11.2",
-    "js-beautify": "1.10.2",
-    "lodash.get": "4.4.2",
-    "lodash.has": "4.5.2",
-    "prettier": "1.18.2"
+    "js-beautify": "^1.10.3",
+    "lodash.get": "^4.4.2",
+    "lodash.has": "^4.5.2"
   }
 }
