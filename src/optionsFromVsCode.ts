@@ -55,6 +55,7 @@ export default function(config) {
     html: {
       end_with_newline: config.html.format.endWithNewline,
       js: {
+        templating: "php",
         end_with_newline: false
       }
     }
